@@ -7,7 +7,7 @@ const Header3 = () => {
   const [city, setCity] = useState();
 
   return (
-    <div className=" bg-gradient-to-r from-red-600 to-red-400 h-40 pb-5">
+    <div className=" bg-gradient-to-r from-red-600 to-red-400 h-40 pb-[2vh]">
       <div className=" p-5">
         <h2 className=" md:text-4xl text-2xl text-white text-center font-bold">
           Over 157,000 hotels and homes across 35 countries
