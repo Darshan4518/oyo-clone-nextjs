@@ -68,7 +68,7 @@ export default Hotels;
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.BASE_URL}/api/hotels?city=${ctx.query.city}`
+      `https://darshan-hotels.vercel.app/api/hotels?city=${ctx.query.city}`
     );
     const data = await res.json();
     return {
