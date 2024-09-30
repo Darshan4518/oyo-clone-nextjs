@@ -1,40 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### OYO-Clone
+<h3>
+  A feature-rich OYO clone built using Next.js, offering seamless hotel search and booking experiences. This project utilizes getServerSideProps for efficient server-side rendering, ensuring fast and dynamic data fetching. Users can search hotels by city or name, with advanced filtering options based on features and price. The application provides comprehensive hotel details, including images, amenities, and reviews. Integrated with Razorpay, the platform allows users to make secure payments directly through the website. The project showcases robust API handling, dynamic data fetching, and an intuitive user interface for an enhanced hotel booking experience.
+</h3>
 
-## Getting Started
+ ## TechStack
+Nextjs
+Tailwind CSS
 
-First, run the development server:
+##ScreenShots 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Screenshot 2024-09-30 181617](https://github.com/user-attachments/assets/74331cc2-2add-4b0a-a1ca-26327200f5bc)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot 2024-09-30 181630](https://github.com/user-attachments/assets/4f68432b-b420-4973-8066-655518c3e27f)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![Screenshot 2024-09-30 182225](https://github.com/user-attachments/assets/3f4ada8c-910a-4559-bc91-7208f9e59bd7)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![Screenshot 2024-09-30 182626](https://github.com/user-attachments/assets/82283323-005c-4cbc-bf4c-17a67a63794a)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Screenshot 2024-09-30 182634](https://github.com/user-attachments/assets/431436a3-ba32-4819-803f-5fc3a8b88a0d)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot 2024-09-30 182859](https://github.com/user-attachments/assets/5369148e-aab9-470b-b981-13dd9aad4ef8)
