@@ -70,13 +70,25 @@ export async function getServerSideProps(ctx) {
     const res = await fetch(
       `https://darshan-hotels.vercel.app/api/hotels?city=${ctx.query.city}`
     );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch hotels data");
+    }
+
     const data = await res.json();
+
     return {
       props: {
-        hotels: data.hotels || data.allhotels,
+        hotels: data.hotels || data.allhotels || [], // Ensure a fallback array
       },
     };
   } catch (error) {
-    console.log("city search error");
+    console.error("City search error:", error);
+    return {
+      props: {
+        hotels: [], // Return an empty array as a fallback
+        error: "Failed to fetch hotels data", // Optionally, include an error message
+      },
+    };
   }
 }

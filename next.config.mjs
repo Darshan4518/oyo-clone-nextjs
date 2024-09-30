@@ -2,11 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["images.oyoroomscdn.com", "encrypted-tbn0.gstatic.com"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "images.oyoroomscdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**", // This allows all hosts with HTTPS
       },
     ],
   },

@@ -87,7 +87,7 @@ const SingleHotel = ({ hotel }) => {
           </ul>
           <div className=" my-5">
             {!auth ? (
-              <Link href={`/payment/${hotel._id}`}>
+              <Link href={`/payment/${hotel?._id}`}>
                 <button className=" w-60 h-14 rounded-lg bg-red-400 my-5 text-lg">
                   Book Now
                 </button>
@@ -109,18 +109,42 @@ const SingleHotel = ({ hotel }) => {
 };
 
 export async function getServerSideProps(ctx) {
-  try {
-    const res = await fetch(
-      `${process.env.BASE_URL}/api/hotels/${ctx.query.id}`
-    );
-    const data = await res.json();
+  const { id } = ctx.query;
+
+  if (!id) {
+    console.error("Hotel ID query parameter is missing");
     return {
       props: {
-        hotel: data.hotel,
+        hotel: null,
+        error: "Hotel ID query parameter is missing",
+      },
+    };
+  }
+
+  try {
+    const res = await fetch(`${process.env.BASE_URL}/api/hotels/${id}`);
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch hotel details for ID: ${id}`);
+    }
+
+    const data = await res.json();
+
+    return {
+      props: {
+        hotel: data.hotel || null,
       },
     };
   } catch (error) {
-    console.log("city id error");
+    console.error("Hotel fetch error:", error);
+    return {
+      props: {
+        hotel: null,
+        error:
+          error.message || "An error occurred while fetching the hotel details",
+      },
+    };
   }
 }
+
 export default SingleHotel;
